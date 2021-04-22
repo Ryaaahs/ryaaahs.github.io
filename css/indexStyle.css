@@ -1,0 +1,299 @@
+html {
+    height: 100%;
+    overflow: auto;
+    font-family: 'Oxygen', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body { 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    /* background-color: #fff7fd; */
+    /* background-image: url("heart.jpg"); */
+}
+
+p {
+    margin: 25px 0 0 0; 
+}
+
+a {
+    cursor: pointer;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-title {
+    display: inline-block;
+    font-size: 2.5em;
+    text-align: center;
+    color: #747fe0; 
+    font-family: 'Bangers', cursive;
+}
+
+.card-title:after {
+    content: "";
+    display: block;
+    border: 4px solid #747fe0;
+    margin: 0 auto;
+}
+
+/* Navbar CSS Chunk */ 
+
+.navbar {
+    /* Need to use position relative in order to use box-shadow */
+    position:relative;
+    height: 10vh;
+    border-radius: 0 0 20px 20px;
+    background-color: #ece3ff; 
+    box-shadow: 0px 12px rgba(46, 45, 83, 0.15);
+}
+
+.navbar-content {
+    float: right; 
+    margin-top: 2em; 
+    padding-right: 3em;
+}
+
+.navbar-content a {
+    padding-left: 2em; 
+    font-size: 1.25em;
+    text-decoration: none;
+    color: #000000; 
+}
+
+.navbar-content a:hover {
+    padding-left: 2em; 
+    font-size: 1.25em;
+    text-decoration: underline;
+    color: #a917bd; 
+}
+
+/* Intro CSS Chunk */ 
+
+.intro {
+    padding-top: 50px;
+    padding-left: 2em; 
+    margin-bottom: 5em;
+    margin-top: 2em;
+}
+
+.intro .intro-content {
+    width: 65%; 
+}
+
+.name {
+    font-size: 4.5em;
+    color: #747fe0; 
+    font-family: 'Bangers', cursive;
+    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+}
+
+/* About Myself CSS Chunk */ 
+
+.about-myself {
+    position:relative;
+    border-radius: 20px;
+    padding: 10px 0 3em 2em;
+    background-color: #ece3ff;
+    box-shadow: 0px 12px rgba(46, 45, 83, 0.15);
+}
+
+.about-content-wrapper {
+    width: 75%; 
+}
+
+.about-content-wrapper ul li {
+    margin-top: 3em;
+}
+
+.about-content-wrapper ul {
+	position: relative;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 2.5em;
+}
+
+.about-content-wrapper ul li:before {
+	content: "[ * ]";
+	position: absolute;
+	left: 0;
+}
+
+/* Projects CSS Chunk */ 
+
+.projects {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 60px;
+    border-radius: 20px;
+    background-color: #ece3ff;
+    flex: auto;
+    box-shadow: 0px 12px rgba(46, 45, 83, 0.15);
+}
+
+.project-card {
+    margin: 2em auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    justify-content: flex-end;
+    box-shadow: 0 50px 100px rgba(50,50,93,.05),
+    0 15px 35px rgba(50,50,93,.1),
+    0 5px 15px rgba(0,0,0,.1);
+}
+
+.project-title {
+    margin: 0;
+    color: rgba(19, 21, 44, 0.75);
+    font-size: 30px;
+}
+
+.project-text { 
+    width: 80%; 
+    font-size: 18px;
+    line-height: 27px;
+    color: #525f7f;
+}
+
+.project-background {
+    position: absolute;
+    width: 75%; 
+    height: 100%;
+    background: url("../projects/projectOverlay.png"); 
+    background-size: cover;
+}
+
+.project-image {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project-content-container {
+    width: 55%;
+    padding: 60px; 
+    z-index: 2;
+}
+
+.tag-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.project-source-code {
+    display: inline-block;
+    background-color: white;
+    color: rgb(116, 127, 224, 1);
+     padding: 10px 15px 0px 15px; 
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: unset;
+    border: 0; 
+    line-height: 2;
+    height: 50px;
+    font-size: 18px;
+    box-shadow: 0 50px 100px rgba(50,50,93,.05),
+    0 15px 35px rgba(50,50,93,.1),
+    0 5px 15px rgba(0,0,0,.1);
+}
+
+.project-source-code:hover {
+    background-color: rgba(185, 170, 250, 0.637);
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.project-tag {
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+    background-color: rgb(116, 127, 224, 0.5);
+    padding: 8px; 
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 50px 100px rgba(50,50,93,.05),
+    0 15px 35px rgba(50,50,93,.1),
+    0 5px 15px rgba(0,0,0,.1);
+}
+
+.project-tag:hover {
+    background-color: rgba(185, 170, 250, 0.637);
+    transform: translateY(-2px);
+    cursor: default;
+} 
+
+/* Artworks CSS Chunk */
+.artworks {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 2em 0 3em 0px;
+    border-radius: 20px;
+    background-color: #ece3ff;
+    box-shadow: 0px 12px rgba(46, 45, 83, 0.15);
+}
+
+.artwork-container {
+    width: 100%; 
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.artwork-reset {
+    position: relative;
+    float: right;
+    top: 0.4em;
+    right: 2em;
+    text-align: center;
+    background-color: rgb(116, 127, 224, 0.5);
+    border-radius: 10px;
+    padding: 12px; 
+    border: 0;
+    font-size: 2em;
+    box-shadow: 0 50px 100px rgba(50,50,93,.05),
+    0 15px 35px rgba(50,50,93,.1),
+    0 5px 15px rgba(0,0,0,.1);
+}
+
+.artwork-reset:hover {
+    background-color: rgba(185, 170, 250, 0.637);
+    transform: translateY(-2px);
+    cursor: pointer;
+} 
+
+.artwork-content { 
+    text-align: center;
+}
+
+.artwork-item {
+    padding-top: 25px;
+}
+
+.contact {
+    margin-bottom: 50px;
+    padding: 50px;
+    text-align: center;
+}
+
+.contact a {
+    padding-right: 2em; 
+}
+
+.contact-content {
+    padding-top: 4em;
+}
+
+.copyright {
+    margin-top: 4em;
+}

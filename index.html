@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="CSS/indexStyle.css"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">    
+        <script src="js/utility.js"></script>
+    </head>
+    <body>
+        <div class="content-container">
+            <div class="content">
+                <!-- Navbar -->     
+                <div class="navbar">
+                    <div class="navbar-content">
+                        <nav>
+                            <a onclick="scrollToSection('projects')">Projects</a> 
+                            <a onclick="scrollToSection('artworks')">Artworks</a> 
+                            <a onclick="scrollToSection('contact')">Contact</a> 
+                        </nav> 
+                    </div> 
+                </div>
+                
+                <div class="intro"> 
+                    <p class="name">Reily Maahs</p>
+                    <p class="intro-content"> I am a Junior System Analyst at the Canada School of Public Service. I love seeing people smile using my applications.</p>
+                </div>
+
+                <div class="about-myself">
+                    <p class="card-title">About me!</p>
+                    <div class="about-content-wrapper">
+                        <ul>
+                            <li>Had a Visual Art background in highschool before transitioning to Computer Science.</li>
+                            <li>Second year Computer Engineering Technology - Computer Science (CET-CS) student at Algonquin College</li>
+                            <li>Have interests in Game Development and Graphics programming</li>
+                            <li>Things I enjoy outside of programming is pixel art and long distance running.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="projects" class="projects">
+
+                    <p class="card-title">Projects</p>
+
+                    <div class="project-card">
+                        <img class="project-image" src="projects/personalProject.png" />
+                        <!-- <div style="background-color: red;" class="project-image">
+                            
+                        </div> -->
+                        <div class="project-background"></div>
+
+                        <div class="project-content-container">
+                            <h3 class="project-title">Portfolio Website</h3>
+                            <p class="project-text">This current webpage. Has different sections showcasing about myself, previous projects, and artworks</p>
+                            <div class="tag-container">
+                                <div class="project-tag">HTML</div>
+                                <div class="project-tag">CSS</div>
+                                <div class="project-tag">JS</div>
+                            </div>
+                            <a href="https://github.com" class="project-source-code">
+                                Project Repo
+                                <img style="float: right; margin-left: 0.5em;" src="projects/githubLogo.png"/>
+                            </a>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div id="artworks" class="artworks">
+                    
+                    <div style="text-align: center;">
+                        <p style="margin-left: 7em" class="card-title">Artworks</p>
+                        <button class="artwork-reset" onclick="resetArtworkSizes()">Reset Artwork Size</button>
+                    </div>
+                    <p class="artwork-content">With art, I focus on game assets such as: game mocks, sprite sheets, individual sprites, and tilesets below.</p>
+                    <p class="artwork-content">Left click images to enlargen them if they can. Reset their size using the "Reset Artwork Size" button</p>
+                    
+                    <div class="artwork-container">
+                        <div id="artwork-1" class="artwork-item">
+                            <img src="artworks/gameMockRPG.jpg" />
+                        </div>
+                        <div id="artwork-2" class="artwork-item">
+                            <img src="artworks/itemSheet.jpg" />
+                        </div>
+                        <div id="artwork-3" class="artwork-item">
+                            <img src="artworks/characterSpriteSheet.jpg" />
+                        </div>
+                        <div id="artwork-4" class="artwork-item">
+                            <img src="artworks/gameMockBulletHell.png" />
+                        </div>
+                        <div id="artwork-5" class="artwork-item">
+                            <img src="artworks/tileSet.png" />
+                        </div>
+                        <div id="artwork-6" class="artwork-item">
+                            <img src="artworks/minesweeperArtwork.png" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <footer id="contact" class="contact">
+                    <p class="card-title">Contact</p>
+                    <div class="contact-content">
+                        <a href="mailto:reily.maahs@gmail.com">reily.maahs@gmail.com</a>
+                        <a href="https://github.com/Ryaaahs">Github</a>
+                        <a href="https://www.linkedin.com/in/reily-maahs-11681b191/">Linkedin</a>
+                    </div>
+                    <p class="copyright">Created by Reily Maahs &#169; 2021</p>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
