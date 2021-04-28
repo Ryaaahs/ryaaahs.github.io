@@ -31,7 +31,6 @@ a {
 .card-title {
     display: inline-block;
     font-size: 2.5em;
-    text-align: center;
     color: #747fe0; 
     font-family: 'Bangers', cursive;
 }
@@ -79,11 +78,11 @@ a {
 .intro {
     padding-top: 50px;
     padding-left: 2em; 
-    margin-bottom: 5em;
+    padding-bottom: 5em;
     margin-top: 2em;
 }
 
-.intro .intro-content {
+.intro-content {
     width: 65%; 
 }
 
@@ -97,6 +96,7 @@ a {
 /* About Myself CSS Chunk */ 
 
 .about-myself {
+    text-align: center;
     position:relative;
     border-radius: 20px;
     padding: 10px 0 3em 2em;
@@ -120,7 +120,7 @@ a {
 }
 
 .about-content-wrapper ul li:before {
-	content: "[ * ]";
+	content: "";
 	position: absolute;
 	left: 0;
 }
@@ -131,6 +131,7 @@ a {
     margin-top: 2em;
     margin-bottom: 2em;
     padding: 60px;
+    text-align: center;
     border-radius: 20px;
     background-color: #ece3ff;
     flex: auto;
@@ -296,4 +297,98 @@ a {
 
 .copyright {
     margin-top: 4em;
+}
+
+@media only screen and (min-width: 768px) {
+    .reset {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .content-container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .navbar-content {
+        width: 100%;
+    }
+
+    .reset {
+        display: none;
+    }
+
+    .contact-content {
+        padding-top: 1em;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .contact-content a {
+        margin-top: 1em;
+        padding-right: 0;
+    }
+
+    .navbar-content {
+        text-align: center;
+        float: none;
+        margin-top: 0em; 
+        padding-top: 1.5em;
+        padding-right: 0em;
+    }
+
+    .navbar-content a {
+        padding-left: 1em;
+        text-decoration: underline;
+    }
+
+    .intro {
+        text-align: center;
+        padding-left: 0em;
+        padding-top: 1em;
+        padding-bottom: 3em;
+    }
+
+    .intro-content {
+        width: 100%;
+    }
+
+    .about-myself {
+        padding: 0em;
+        padding-bottom: 2em;
+    }
+
+    .about-content-wrapper {
+        margin: 0 auto; 
+    }
+
+    .about-content-wrapper ul {
+        padding-left: 0em;
+    }
+
+    .contact {
+        margin-bottom: 1em;
+    }
+
+    .projects {
+        padding: 0em 1em 1em 1em; 
+    }
+
+    .project-content-container {
+        width: 100%;
+        padding: 1em 0 2em 0;
+    }
+    
+    .project-text {
+        width: 100%;
+    }
+
+    .project-image { 
+        display: none;
+    }
+
+    .project-background { 
+        display: none;
+    }
 }

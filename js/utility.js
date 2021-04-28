@@ -1,11 +1,43 @@
 let imgSizes = [];
 
-// Grabs all the current images sizes (Width and Height) for all the artwork images,
-// then assigns it to a variable using a utility function for later use.
-document.addEventListener("DOMContentLoaded", function(e) {
+
+// Mobile Phones
+if(screen.width <= 415){
+    document.addEventListener("DOMContentLoaded", function(e) {
+        let i;
+        let img = new Image()
+        const artworkImages = document.querySelectorAll("div.artwork-item > img");
+        for(i = 0; i < artworkImages.length; i++){
+            let childElement = artworkImages[i]; 
+            img.src = childElement.src; 
+            if(img.width > 350){
+                childElement.width = img.width / 2;
+                childElement.scrollHeight = img.height / 2;
+            }
+        }
+    });
+// Desktops
+}else if (screen.width <= 768){
+    document.addEventListener("DOMContentLoaded", function(e) {
+        let i;
+        let img = new Image()
+        const artworkImages = document.querySelectorAll("div.artwork-item > img");
+        for(i = 0; i < artworkImages.length; i++){
+            let childElement = artworkImages[i]; 
+            img.src = childElement.src; 
+            if(img.width > 400){
+                childElement.width = img.width / 2;
+                childElement.scrollHeight = img.height / 2;
+            }
+        }
+    });
+}else if(screen.width > 768){
+    // Grabs all the current images sizes (Width and Height) for all the artwork images,
+    // then assigns it to a variable using a utility function for later use.
+    document.addEventListener("DOMContentLoaded", function(e) {
     const imgSizes = [];
-    const artworkImages = document.querySelectorAll(".artwork-item img");
-    
+    const artworkImages = document.querySelectorAll("div.artwork-item > img");
+    console.log(artworkImages); 
     let img = new Image()
     for(let i = 0; i < artworkImages.length; i++){
         let childElement = artworkImages[i]; 
@@ -20,7 +52,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
         imgSizes.push([img.width, img.height]); 
     }
     setImgSizes(imgSizes);
-});
+    });
+}
+
 
 // Scrolls to a specific element defined by the argument
 function scrollToSection(element) {
