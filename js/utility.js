@@ -69,7 +69,6 @@ if(window.innerWidth <= 415){
     let img = new Image()
     for(let i = 0; i < artworkImages.length; i++){
         let childElement = artworkImages[i]; 
-        console.log(typeof childElement.onclick !== "function");
         if(typeof childElement.onclick !== "function") {
             childElement.onclick = function() {
                 const artworkContainer = document.querySelectorAll(".artwork-container");
@@ -78,7 +77,6 @@ if(window.innerWidth <= 415){
                     this.scrollHeight = this.scrollHeight * 2;
                 }
             }
-            console.log(typeof childElement.onclick !== "function");
         }
         img.src = childElement.src; 
         imgSizes.push([img.width, img.height]); 
@@ -89,7 +87,6 @@ if(window.innerWidth <= 415){
 
 // On screen change
 window.addEventListener('resize', () => {
-    console.log(window.innerWidth);
     if(window.innerWidth <= 850){
         let i;
         let img = new Image()
