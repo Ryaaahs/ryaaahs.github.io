@@ -9,6 +9,7 @@ if(window.innerWidth <= 415){
         const artworkImages = document.querySelectorAll("div.artwork-item > img");
         for(i = 0; i < artworkImages.length; i++){
             let childElement = artworkImages[i]; 
+            // While getting img sizes, append on click event to them to allow scale
             if(typeof childElement.onclick !== "function") {
                 childElement.onclick = function() {
                     const artworkContainer = document.querySelectorAll(".artwork-container");
@@ -29,7 +30,7 @@ if(window.innerWidth <= 415){
         setImgSizes(imgSizes);
     });
 //Tablets
-}else if (window.innerWidth <= 700){
+}else if (window.innerWidth < 768){
     document.addEventListener("DOMContentLoaded", function(e) {
         let i;
         let img = new Image()
@@ -46,9 +47,11 @@ if(window.innerWidth <= 415){
                 }
             }
             img.src = childElement.src; 
-            if(img.width > 400){
-                childElement.width = img.width / 2;
-                childElement.scrollHeight = img.height / 2;
+            if(window.innerWidth <= 700){
+                if(img.width > 400){
+                    childElement.width = img.width / 2;
+                    childElement.scrollHeight = img.height / 2;
+                }
             }
             img.src = childElement.src; 
             imgSizes.push([img.width, img.height]); 
@@ -66,7 +69,6 @@ if(window.innerWidth <= 415){
     let img = new Image()
     for(let i = 0; i < artworkImages.length; i++){
         let childElement = artworkImages[i]; 
-        // While getting img sizes, append on click event to them to allow scale
         console.log(typeof childElement.onclick !== "function");
         if(typeof childElement.onclick !== "function") {
             childElement.onclick = function() {
@@ -88,14 +90,13 @@ if(window.innerWidth <= 415){
 // On screen change
 window.addEventListener('resize', () => {
     console.log(window.innerWidth);
-    if(window.innerWidth <= 700){
+    if(window.innerWidth <= 850){
         let i;
         let img = new Image()
         const artworkImages = document.querySelectorAll("div.artwork-item > img");
         for(i = 0; i < artworkImages.length; i++){
             let childElement = artworkImages[i]; 
             img.src = childElement.src; 
-            //childElement.onclick = ""; 
             if(window.screen.width <= 415){
                 if(img.width > 350){
                     childElement.width = img.width / 2;

@@ -10,9 +10,6 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    font: inherit;
-    /* background-color: #fff7fd; */
-    /* background-image: url("heart.jpg"); */
 }
 
 p {
@@ -43,10 +40,10 @@ a {
 }
 
 /* Navbar CSS Chunk */ 
-
+/*#region*/
 .navbar {
     /* Need to use position relative in order to use box-shadow */
-    position:relative;
+    position: relative;
     height: 10vh;
     border-radius: 0 0 20px 20px;
     background-color: #ece3ff; 
@@ -72,9 +69,10 @@ a {
     text-decoration: underline;
     color: #a917bd; 
 }
+/*#endregion*/
 
 /* Intro CSS Chunk */ 
-
+/*#region*/
 .intro {
     padding-top: 50px;
     padding-left: 2em; 
@@ -91,11 +89,11 @@ a {
     font-size: 4.5em;
     color: #747fe0; 
     font-family: 'Bangers', cursive;
-    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
 }
+/*#endregion*/
 
 /* About Myself CSS Chunk */ 
-
+/*#region*/
 .about-myself {
     text-align: left;
     position:relative;
@@ -128,9 +126,10 @@ a {
 	position: absolute;
 	left: 0;
 }
+/*#endregion*/
 
 /* Projects CSS Chunk */ 
-
+/*#region*/
 .projects {
     margin-top: 2em;
     margin-bottom: 2em;
@@ -234,8 +233,10 @@ a {
     background-color: #f9f8ff;
     outline: solid rgba(116, 127, 224, 0.5);
 }
+/*#endregion*/
 
 /* Artworks CSS Chunk */
+/*#region*/
 .artworks {
     margin-top: 2em;
     margin-bottom: 2em;
@@ -261,12 +262,10 @@ a {
 
 .center {
     width: 60%;
-    /* justify-content: center; */
 }
 
 .artwork-header .card-title:after {
     display: block;
-    /* justify-content: center; */
 }
 
 .left, .right {
@@ -305,7 +304,10 @@ a {
 .artwork-item {
     padding-top: 25px;
 }
+/*#endregion*/
 
+/* Contact CSS Chunk */
+/*#region*/
 .contact {
     margin-bottom: 50px;
     padding: 50px;
@@ -323,18 +325,19 @@ a {
 .copyright {
     margin-top: 4em;
 }
+/*#endregion*/
 
-@media all and (min-width: 768px) and (max-width: 1000px) {
-    .reset {
-        display: none;
+/* Tablets and Computers */ 
+@media all and (min-width: 768px) and (max-width: 3000px) {
+    .navbar-content a {
+        display: inline-block;
+        padding-left: 0em;
+        text-decoration: underline;
+        flex-grow: 1;        
     }
 
-    .about-myself {
-        text-align: center;
-    }   
-
-    .about-content-wrapper ul {
-        padding-left: 0em;
+    .navbar-content nav {
+        display: inline-block;
     }
 
     .navbar-content {
@@ -345,7 +348,7 @@ a {
         display: flex;
         text-align: center;
     }
-
+    
     .intro {
         text-align: center;
         padding-left: 0em;
@@ -360,6 +363,14 @@ a {
     }
 
     .about-myself {
+        text-align: center;
+    }   
+
+    .about-content-wrapper ul {
+        padding-left: 0em;
+    }
+
+    .about-myself {
         padding: 0em;
         padding-bottom: 2em;
     }
@@ -368,23 +379,6 @@ a {
         margin: 0 auto; 
     }
 
-    .navbar-content a {
-        display: inline-block;
-        padding-left: 0em;
-        text-decoration: underline;
-        flex-grow: 1;        
-    }
-
-    .navbar-content nav {
-        display: inline-block;
-    }
-
-    .artwork-content {
-        width: 70%;
-        margin: 0 auto; 
-        padding-top: 2em;
-        padding-bottom: 1em;;
-    }
 
     .projects {
         padding: 0em 1em 1em 1em; 
@@ -411,8 +405,20 @@ a {
     .project-background { 
         display: none;
     }
+
+    .artwork-content {
+        width: 70%;
+        margin: 0 auto; 
+        padding-top: 2em;
+        padding-bottom: 1em;;
+    }
+
+    .reset {
+        display: none;
+    }
 }
 
+/* Phones */ 
 @media all and (min-width: 250px) and (max-width: 767px)  {
     .content-container {
         max-width: 100%;
@@ -421,21 +427,6 @@ a {
 
     .navbar-content {
         width: 100%;
-    }
-
-    .reset {
-        display: none;
-    }
-
-    .contact-content {
-        padding-top: 1em;
-        display: flex;
-        flex-flow: column;
-    }
-
-    .contact-content a {
-        margin-top: 1em;
-        padding-right: 0;
     }
 
     .navbar-content {
@@ -470,21 +461,12 @@ a {
         text-align: center;
     }
 
-    .artwork-content {
-        margin: 2em 0 1em 0;
-    }
-
     .about-content-wrapper {
         margin: 0 auto; 
     }
 
     .about-content-wrapper ul {
         padding-left: 0em;
-    }
-
-    .contact {
-        padding: 20px 50px;
-        margin-bottom: 1em;
     }
 
     .projects {
@@ -511,5 +493,29 @@ a {
 
     .project-background { 
         display: none;
+    }
+
+    .artwork-content {
+        margin: 2em 0 1em 0;
+    }
+
+    .reset {
+        display: none;
+    }
+
+    .contact {
+        padding: 20px 50px;
+        margin-bottom: 1em;
+    }
+
+    .contact-content {
+        padding-top: 1em;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .contact-content a {
+        margin-top: 1em;
+        padding-right: 0;
     }
 }
